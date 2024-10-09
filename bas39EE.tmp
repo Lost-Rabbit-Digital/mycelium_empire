@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca5lgblrurkou"]
+
+[ext_resource type="Shader" path="res://isometric_project.gdshader" id="1_bkqx2"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="2_y18ly"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_42q03"]
+render_priority = 0
+shader = ExtResource("1_bkqx2")
+shader_parameter/iso_angle = 0.33
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flks8"]
+albedo_color = Color(0.662745, 0.392157, 0.2, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D (ResourceHouse)" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.548003, 0)
+material = SubResource("ShaderMaterial_42q03")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(15, 0.1, 15)
+material = SubResource("StandardMaterial3D_flks8")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47725, 2.30091)
+script = ExtResource("2_y18ly")

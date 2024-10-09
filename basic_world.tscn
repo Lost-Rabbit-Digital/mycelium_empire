@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca5lgblrurkou"]
+
+[ext_resource type="Material" uid="uid://416rkss2pxps" path="res://materials/mushroom_stem_material.tres" id="2_j2vs3"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="2_y18ly"]
+[ext_resource type="Script" path="res://mushroom_house.gd" id="3_8qkdc"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14324, -5.73492, 6.71089)
+size = Vector3(250, 1, 250)
+material = ExtResource("2_j2vs3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.990591, 0.0783882, -0.112183, 0.0457648, 0.962256, 0.26827, 0.128978, 0.260612, -0.95679, -0.34749, 2.2428, -5.25889)
+size = 5.09535
+near = 0.001
+far = 100.0
+script = ExtResource("2_y18ly")
+move_speed = 100.0
+min_zoom = 20.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.2969, 7.62908, 60.6522)
+light_energy = 7.0
+light_indirect_energy = 4.0
+light_size = 1.16
+omni_range = 300.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.6327, 7.62908, -60.7167)
+light_energy = 7.0
+light_indirect_energy = 4.0
+light_size = 1.16
+omni_range = 300.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9162, 7.62908, -62.9242)
+light_energy = 7.0
+light_indirect_energy = 4.0
+light_size = 1.16
+omni_range = 300.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.1498, 7.62908, 53.1334)
+light_energy = 7.0
+light_indirect_energy = 4.0
+light_size = 1.16
+omni_range = 300.0
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+visible = false
+script = ExtResource("3_8qkdc")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.7906, 0, -65.8392)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.8244, 0, -66.0035)
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.7572, 0, -44.7962)
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85.1113, 0, -46.271)
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.6017, 0, -47.0371)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.9149, 0, -66.6135)
+size = Vector3(15, 5, 15)
